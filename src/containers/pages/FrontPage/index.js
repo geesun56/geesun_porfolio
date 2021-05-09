@@ -1,7 +1,8 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/styles';
-import FrontResource from '../../../resources/greetings.json';
+import FrontResource from '../../../resources/introduction.json';
 import Button from '../../../components/Button/';
+import {AiFillDownCircle} from 'react-icons/ai';
 
 const useStyles = makeStyles({
     'portrait': {
@@ -25,10 +26,15 @@ const useStyles = makeStyles({
         paddingTop: '20px'
     },
     'frontContainer': {
-        margin: "130px 0",
+        marginTop: "130px",
         padding: '20px',
         width: 'calc(100%-40px)',
-        height: '352px'
+        height: 'auto'
+    },
+    'scroll':{
+        margin: '310px 0 0 0',
+        display: 'inline-block',
+        width: '100%'
     }
 })
 
@@ -44,6 +50,8 @@ export default function FrontPage(){
                 <div className={classes.textBlock}>{FrontResource.content}</div>
                 <Button fontSize='18px' float='right' marginTop="20px" marginRight="50px">Get in touch</Button>
             </div>
+
+            <p className={classes.scroll}>Scroll down <AiFillDownCircle/></p>
         </div>
     );
 }

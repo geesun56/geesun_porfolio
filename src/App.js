@@ -2,7 +2,9 @@ import {useState} from 'react';
 import Navigation from './components/Navigation';
 import {makeStyles} from '@material-ui/styles';
 import FrontPage from './containers/pages/FrontPage'
-
+import About from './containers/pages/About'
+import Contact from './containers/pages/Contact'
+import Projects from './containers/pages/Projects'
 
 const useStyles = makeStyles({
   'App': {
@@ -19,6 +21,9 @@ function App() {
     <div className={classes.App}>
       <Navigation menu = {menu} setMenu ={setMenu} />
       <FrontPage/>
+      <About/>
+      <Projects/>
+      <Contact/>
     </div>
   );
 }

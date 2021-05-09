@@ -1,0 +1,5 @@
+{
+    "Languages":[ "JavaScript", "HTML", "CSS", "Python", "C#"],
+    "Frameworks":["React", ".NET Core", "Pytorch"],
+    "Others":["Git/Github", "Chrome Dev Tool", "Visual Studio Code", "RaspberryPi"]
+}

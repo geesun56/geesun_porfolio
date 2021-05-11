@@ -3,6 +3,7 @@ import {makeStyles} from '@material-ui/styles';
 import aboutResource from '../../../resources/introduction.json';
 import SkillBox from '../../../components/SkillBox';
 import SkillTable from '../../../components/SkillTable';
+import ExperienceTable from '../../../components/ExperienceTable/';
 
 const useStyles = makeStyles({
     'aboutContainer':{
@@ -52,11 +53,9 @@ export default function About() {
        <div>
         <h2 className={classes.titles}>Skills</h2>
            <SkillTable/>
-        
+            
         <h2 className={classes.titles}>Experience</h2>
-            <p> Deloitte</p>
-            <p> Penn State</p>
-            <p> View Resume</p>
+            <ExperienceTable/>
        </div>
     </div>)
 }

@@ -1,0 +1,6 @@
+{
+    "experience" : [
+        {"jobtitle" : "Solution Analyst", "company": "Deloitte Touche IIC", "description": "- Designed, planned and implemented UI for data management web service used by PBGC federal officials - Developed functional components using React Hooks / Material-UI frameworks to provide an intuitive user experience to the client - Implemented ASP.NET framework RESTful APIs to store and fetch processed information from the front-end layer", "duration": "Aug, 2020 - present"}, 
+        {"jobtitle" : "Research Assistant", "company": "Penn State University","description": "Participated in the High-frequency Ultrasound Finger Vein Imaging Research Project ■ Developed an embedded device control system that associates a Raspberry Pi CPU, CNC-milling machine, an Oscillator, and ultrasound transducers. ■ Conducted an under-water ultrasound scanning experiments and regenerated images from collected object scan data", "duration": "May, 2020 - present"},  
+        {"jobtitle" : "Staff Sergeant", "company": "Republic of Korea Airforce" ,"description": "Served as an English interpreter position at the Korean Air Force Headquarters ■ Translated and published 6+ books and selected as a representative of the wing crew.", "duration": "April, 2013 - April, 2015"} ]
+}

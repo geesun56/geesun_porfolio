@@ -3,6 +3,8 @@ import {makeStyles} from '@material-ui/styles';
 import FrontResource from '../../../resources/introduction.json';
 import Button from '../../../components/Button/';
 import {AiFillDownCircle} from 'react-icons/ai';
+import Emoji from '../../../components/Emoji';
+import Shaker from '../../../components/Animation/Shaker';
 
 const useStyles = makeStyles({
     'portrait': {
@@ -20,13 +22,12 @@ const useStyles = makeStyles({
         lineHeight:'1.6'
     } ,
     'textWrapper':{
-        float: 'right',
-        width: '65%',
+        width: '100%',
         textAlign: 'left',
         paddingTop: '20px'
     },
     'frontContainer': {
-        marginTop: "130px",
+        marginTop: "110px",
         padding: '20px',
         width: 'calc(100%-40px)',
         height: 'auto'
@@ -35,7 +36,13 @@ const useStyles = makeStyles({
         margin: '310px 0 0 0',
         display: 'inline-block',
         width: '100%'
-    }
+    },
+    'title1':{
+        fontSize: '60px', 
+        margin: '0',
+        fontFamily: "'Bungee Shade', serif"
+    },
+    
 })
 
 
@@ -44,14 +51,13 @@ export default function FrontPage(){
 
     return (
         <div className={classes.frontContainer}>
-            <img className={classes.portrait} src={FrontResource.image}/>
             <div className={classes.textWrapper}>
-                <h1>{FrontResource.title}</h1>
-                <div className={classes.textBlock}>{FrontResource.content}</div>
-                <Button fontSize='18px' float='right' marginTop="20px" marginRight="50px">Get in touch</Button>
+                <p className={classes.title1}>HELLO THERE, <Shaker><Emoji label="shaka"/></Shaker></p>
+                <p className={classes.title1} style={{margin:'30px 0'}}>I'M AN ENTHUSIASTIC</p>
+                <p className={classes.title1}>SOFTWARE ENGINEER <Emoji label="laptopboy"/></p>
+                {/* <Button fontSize='18px' float='right' marginTop="20px" marginRight="50px">Get in touch</Button> */}
             </div>
 
-            <p className={classes.scroll}>Scroll down <AiFillDownCircle/></p>
         </div>
     );
 }

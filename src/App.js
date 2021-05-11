@@ -9,21 +9,24 @@ import Projects from './containers/pages/Projects'
 const useStyles = makeStyles({
   'App': {
     textAlign: 'center',
-    padding: '0 calc((100% - 1200px)/2)'
-    
-  }
+    padding: '0 calc((100% - 1170px)/2)',
+    background: 'linear-gradient(#f1faee, #faf9f9, #f1faee); ',
+    overflow: 'hidden'
+  },
 })
 function App() {
   const classes = useStyles();
-  const [menu, setMenu] = useState('About');
+  const [menu, setMenu] = useState('Projects');
 
   return (
     <div className={classes.App}>
-      <Navigation menu = {menu} setMenu ={setMenu} />
-      <FrontPage/>
-      <About/>
-      <Projects/>
-      <Contact/>
+
+        <Navigation menu = {menu} setMenu ={setMenu} />
+        <FrontPage/>
+        <Projects/>
+        <About/>
+        <Contact/>
+      
     </div>
   );
 }

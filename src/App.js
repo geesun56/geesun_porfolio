@@ -5,12 +5,13 @@ import FrontPage from './containers/pages/FrontPage'
 import About from './containers/pages/About'
 import Contact from './containers/pages/Contact'
 import Projects from './containers/pages/Projects'
+import Aux from './components/Auxiliary';
 
 const useStyles = makeStyles({
   'App': {
     textAlign: 'center',
     padding: '0 calc((100% - 1170px)/2)',
-    background: 'linear-gradient(#f1faee, #faf9f9, #f1faee); ',
+    background: 'linear-gradient(#f1faee, #faf9f9, #E1F4DA); ',
     overflow: 'hidden'
   },
 })
@@ -22,10 +23,16 @@ function App() {
     <div className={classes.App}>
 
         <Navigation menu = {menu} setMenu ={setMenu} />
-        <FrontPage/>
-        <Projects/>
-        <About/>
-        <Contact/>
+        {
+          menu == 'Projects'? 
+          <Aux>
+            <FrontPage/>
+            <Projects/>
+          </Aux> 
+          : (menu == 'About'? <Aux><About/></Aux>:<Aux><Contact/></Aux>)
+        }
+        
+        
       
     </div>
   );

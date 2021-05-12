@@ -3,10 +3,36 @@ import {makeStyles} from '@material-ui/styles';
 
 const useStyles = makeStyles({
     'projectCard':{
-
+        width: '100%',
+        fontFamily: "'Space Grotesk', serif",
+        marginBottom:'64px'
     },
     'thumbnail': {
-        width: '100%', height:'auto'
+        width: '100%', 
+        margin: '0',
+        padding:'0',
+        transition: 'transform .2s',
+        display: 'block',
+        overflow: 'auto',
+        lineHeight: 0,
+        '&:hover': {
+            transform: 'scale(1.1) rotate(-3deg)',
+            boxShadow: '5px 5px 15px rgba(180,183,188,0.6)',
+            
+         }
+    },
+    'title':{
+        fontSize: '22px',
+        fontWeight: '600',
+        margin: '16px 0 8px 0'
+    },
+    'desc':{
+        fontSize: '16px',
+        fontWeight: '500',
+        lineWeight: '160%',
+        margin: '0',
+        color: '#666'
+        
     }
 });
 
@@ -16,11 +42,11 @@ export default function ProjectPreview(props) {
 
     return(<div className={classes.projectCard}>
         <div className={classes.thumbnail}>
-            <img className={classes.thumbnail} src={project.srcPreview} alt={project.title}/>
+            <img style={{width: '100%', height: '100%'}} src={project.srcPreview} alt={project.title}/>
         </div>
-        <div className={classes.thumbnail}>
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
-        </div>
+        
+            <p className={classes.title}>{project.title}</p>
+            <p className={classes.desc}> {project.description}</p>
+        
     </div>)
 }

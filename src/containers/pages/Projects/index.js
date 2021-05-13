@@ -4,6 +4,9 @@ import Emoji from '../../../components/Emoji';
 import Glowing from '../../../components/Animation/Glowing'
 import ProjectPreview from '../../../components/ProjectPreview';
 import FlexBox from '../../../components/FlexBox';
+import Bounce from 'react-reveal/Bounce';
+import FadeUp from '../../../components/Animation/FadeUp';
+
 
 const useStyles = makeStyles({
     'projectContainer':{
@@ -46,7 +49,7 @@ const projects = new Array(cols).fill(null).map(()=>new Array(1));
 
 sampleProjects.forEach((pr, index) => {
     console.log(projects)
-    projects[index%cols].push(<ProjectPreview project = {pr}/>)
+    projects[index%cols].push(<FadeUp><ProjectPreview project = {pr}/></FadeUp>   )
 })
 
 

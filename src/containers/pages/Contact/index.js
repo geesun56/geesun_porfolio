@@ -1,6 +1,7 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/styles';
 import Button from '../../../components/Button/';
+import FadeIn from '../../../components/Animation/FadeIn';
 
 const useStyles = makeStyles({
     'Contact_container' : {
@@ -41,7 +42,8 @@ const useStyles = makeStyles({
 export default function Contact(){
     const classes = useStyles();
 
-    return (<div className={classes.Contact_container}>
+    return (<FadeIn>
+            <div className={classes.Contact_container}>
         <div className={classes.Contact_desc}>
             <h3 style={{fontSize:'24px'}}>Wanna know more?</h3>
             <div style={{fontSize: '19px', lineHeight: '30px'}}>What to know more about my design process? Have an exciting project that could use my help? Drop me a line and let's chat!</div>
@@ -59,5 +61,6 @@ export default function Contact(){
                 </form>
         </div>
         <Button fontSize='17px' float='right' marginTop="20px">Send Me!</Button>
-    </div>)
+    </div>
+        </FadeIn>)
 }

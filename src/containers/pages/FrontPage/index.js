@@ -5,6 +5,8 @@ import Button from '../../../components/Button/';
 import {AiFillDownCircle} from 'react-icons/ai';
 import Emoji from '../../../components/Emoji';
 import Shaker from '../../../components/Animation/Shaker';
+import FadeIn from '../../../components/Animation/FadeIn';
+import Projects from '../Projects';
 
 const useStyles = makeStyles({
     'portrait': {
@@ -50,7 +52,8 @@ export default function FrontPage(){
     const classes = useStyles();
 
     return (
-        <div className={classes.frontContainer}>
+        <FadeIn>
+            <div className={classes.frontContainer}>
             <div className={classes.textWrapper}>
                 <p className={classes.title1}>HELLO THERE, <Shaker><Emoji label="shaka"/></Shaker></p>
                 <p className={classes.title1} style={{margin:'30px 0'}}>I'M AN ENTHUSIASTIC</p>
@@ -59,5 +62,8 @@ export default function FrontPage(){
             </div>
 
         </div>
+        <Projects/>
+        </FadeIn>
+        
     );
 }

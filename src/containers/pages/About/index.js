@@ -4,6 +4,7 @@ import aboutResource from '../../../resources/introduction.json';
 import SkillBox from '../../../components/SkillBox';
 import SkillTable from '../../../components/SkillTable';
 import ExperienceTable from '../../../components/ExperienceTable/';
+import FadeIn from '../../../components/Animation/FadeIn';
 
 const useStyles = makeStyles({
     'aboutContainer':{
@@ -43,7 +44,9 @@ const useStyles = makeStyles({
 export default function About() {
     const classes = useStyles();
 
-    return(<div className={classes.aboutContainer}>
+    return(<FadeIn>
+
+    <div className={classes.aboutContainer}>
         <div className={classes.aboutDiv}> 
             <h2 className={classes.titles}>About Me</h2>
             <p className={classes.aboutText}>
@@ -57,5 +60,6 @@ export default function About() {
         <h2 className={classes.titles}>Experience</h2>
             <ExperienceTable/>
        </div>
-    </div>)
+    </div>
+    </FadeIn>)
 }

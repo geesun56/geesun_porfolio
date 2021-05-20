@@ -3,13 +3,21 @@ import {makeStyles} from '@material-ui/styles';
 
 const useStyles = makeStyles({
     'flexContainer':{
+        padding: '20px',
         display: 'flex',
         justifyContent: 'space-between',
+        
         
     },
 
     'flexCols':{
-        flexBasis: '30.1%'
+        flexBasis: '30.1%',
+        ['@media (max-width:1200px)']: { // eslint-disable-line no-useless-computed-key
+            flexBasis: '47%'
+          },
+          ['@media (max-width:1200px)']: { // eslint-disable-line no-useless-computed-key
+            flexBasis: '100%'
+          }
     },
 
 })

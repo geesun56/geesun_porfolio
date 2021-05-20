@@ -1,0 +1,3 @@
+{
+    "items": [{"icon": "Frontend", "skill" : "Frontend development", "desc": "Create a intutive user interface components using frontend libraries" , "stack": ["JavaScript", "HTML", "CSS", "React"]}, {"icon":"Backend", "skill" : "Backend development", "desc": "Create RESTful APIs to provide requested data rendering to the UI" , "stack": ["C#", ".NET Core"]}, {"icon":"ML", "skill" : "Neural Network Modeling", "desc": "Design and implement a model that can solve problems with data " , "stack": ["Python", "Pytorch"]}, {"icon":"Embedded", "skill" : "Embedded system development", "desc": "Create a application associates hardware components for users" , "stack": ["C", "Linux", "Raspberry Pi"]}]
+}

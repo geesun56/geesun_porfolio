@@ -1,43 +1,51 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/styles';
-import aboutResource from '../../../resources/introduction.json';
-import SkillBox from '../../../components/SkillBox';
-import SkillTable from '../../../components/SkillTable';
-import ExperienceTable from '../../../components/ExperienceTable/';
+import aboutData from '../../../resources/aboutData.json';
+import Skills from './Skills';
 import FadeIn from '../../../components/Animation/FadeIn';
+import AboutContact from './About_Contact';
 
 const useStyles = makeStyles({
     'aboutContainer':{
         marginTop: '27px',
         padding: '20px',
-        textAlign: 'left'
+        textAlign: 'center',
+        
 
     },
     'aboutText': {
-    fontSize: '20px',
+    fontSize: '18px',
     textAlign: 'left',
-    lineHeight: '2'
+    lineHeight: '1.5',
+    fontFamily: "'Space Grotesk', serif",
+    fontWeight: '500',
+    color: '#666'
     },
     'titles':{
         textAlign: 'left',
-        marginBottom: '50px',
-        color: '#0180FF'
+        padding: '0',
+        margin: '0',
+        fontFamily: "'Space Grotesk', serif",
+        fontWeight: '600'
     },
     'aboutDiv':{
-        marginBottom: '100px'
+        marginTop: '100px',
+        display:'flex',
+        justifyContent: 'space-between',
+        ['@media (max-width:1200px)']: { // eslint-disable-line no-useless-computed-key
+            flexDirection: 'column',
+            alignItems: 'center',
+            marginTop:'40px'
+          }
     },
-    'skillTable':{
-        '& th': {
-            fontSize: '18px',
-            padding:'0 50px 20px 0',
-            textAlign: 'left'
-        },
-        '& td':{
-
-            padding:'10px 50px 0 0',
-            textAlign: 'left'
-        },
-
+    'aboutImg':{
+        flexBasis: '40%',
+        ['@media (max-width:1200px)']: { // eslint-disable-line no-useless-computed-key
+            
+          }
+    },
+    'aboutContent':{
+        flexBasis: '53%'
     }
 })
 
@@ -48,18 +56,19 @@ export default function About() {
 
     <div className={classes.aboutContainer}>
         <div className={classes.aboutDiv}> 
-            <h2 className={classes.titles}>About Me</h2>
-            <p className={classes.aboutText}>
-                {aboutResource.about}
-            </p>
-        </div>
-       <div>
-        <h2 className={classes.titles}>Skills</h2>
-           <SkillTable/>
+            <div className={classes.aboutImg}><img style={{width:'100%', height:'auto'}} src="https://i.imgur.com/4SdB78W.gif" /></div>
             
-        <h2 className={classes.titles}>Experience</h2>
-            <ExperienceTable/>
-       </div>
+            <div className={classes.aboutContent}>
+                <h2 style={{marginTop: '30px'}} className={classes.titles}>About Me</h2>
+                <p className={classes.aboutText}>{aboutData.about}</p>
+                <h2 style={{marginTop: '40px'}} className={classes.titles}>Experience</h2>
+                <p className={classes.aboutText}>{aboutData.experience}</p>
+            </div>
+           
+        </div>
+       
+        <Skills />
+        <AboutContact/>
     </div>
     </FadeIn>)
 }

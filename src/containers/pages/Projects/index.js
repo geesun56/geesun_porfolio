@@ -10,16 +10,27 @@ import FadeUp from '../../../components/Animation/FadeUp';
 
 const useStyles = makeStyles({
     'projectContainer':{
-        marginTop: '27px',
+        
         padding: '20px',
         textAlign: 'left',
-        marginTop: '40px'
+        marginTop: '40px',
+        ['@media (max-width:400px)']: { // eslint-disable-line no-useless-computed-key
+            
+            marginTop:'0px'
+          }
     },
     'projectHeader':{
         fontFamily: "'Raleway', serif",
         fontSize: '45px',
         fontWeight: 'bold',
-        
+        ['@media (max-width:1200px)']: { // eslint-disable-line no-useless-computed-key
+            fontSize: '40px',
+            marginLeft: '20px'
+          },
+          ['@media (max-width:400px)']: { // eslint-disable-line no-useless-computed-key
+            fontSize: '30px',
+            marginLeft: '0'
+          }
     },
     'projectPreviews': {
         display: 'grid',
@@ -44,7 +55,7 @@ const sampleProjects = [{'title': 'Spiderman', 'description': 'Great power comes
                         {'title':'Dummy Project', 'description': "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", 'srcPreview': 'https://images.unsplash.com/photo-1620736214173-0544d50a8c86?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80'},
                         {'title':'Dummy Project', 'description': "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", 'srcPreview': 'https://images.unsplash.com/photo-1612392062798-4117917fcc50?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'}]
 
-const cols = 3;
+let cols = window.innerWidth > 1200? 3 : (window.innerWidth > 763? 2 : 1 );
 const projects = new Array(cols).fill(null).map(()=>new Array(1));
 
 sampleProjects.forEach((pr, index) => {

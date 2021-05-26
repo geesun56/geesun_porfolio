@@ -12,10 +12,10 @@ const useStyles = makeStyles({
 
     'flexCols':{
         flexBasis: '30.1%',
-        ['@media (max-width:1200px)']: { // eslint-disable-line no-useless-computed-key
+        ['@media (max-width:1200px)']: { 
             flexBasis: '47%'
           },
-          ['@media (max-width:1200px)']: { // eslint-disable-line no-useless-computed-key
+          ['@media (max-width:764px)']: {
             flexBasis: '100%'
           }
     },
@@ -28,7 +28,7 @@ export default function FlexBox(props){
     const [thumbnail, setThumbnail] = useState([]);
 
     useEffect(() => {
-        console.log(props);
+        console.log(projects);
     }, [])
 
     return (

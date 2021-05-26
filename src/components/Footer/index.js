@@ -84,7 +84,7 @@ const useStyles = makeStyles({
     }
     
 })
-const NavItems = [{item: 'Email', link:'mailto:geesun.apply@gmail.com'}, {item: 'Linkedin', link:'https://www.linkedin.com/in/geesun-jang-84087416a/'}, {item: 'Github', link: "https://github.com/geesun56"},{item: 'Resume', link:"https://drive.google.com/file/d/1_OrO-s7DF7vAvowbE-xdBpZOXiAkl082/view?usp=sharing"}];
+const NavItems = [{item: 'Email', link:'mailto:geesun.apply@gmail.com'}, {item: 'Linkedin', link:'https://www.linkedin.com/in/geesun-jang-84087416a/'}, {item: 'Github', link: "https://github.com/geesun56"},{item: 'Resume', link:"https://firebasestorage.googleapis.com/v0/b/geesun-portfolio-7c275.appspot.com/o/Geesun_Resume.pdf?alt=media&token=ddf8b0bf-2d03-46bc-8394-b613a2ff66c0"}];
 
 export default function Navigation(props){
     const classes  = useStyles();

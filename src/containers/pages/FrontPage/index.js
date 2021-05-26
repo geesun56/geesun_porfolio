@@ -65,20 +65,20 @@ const useStyles = makeStyles({
 })
 
 
-export default function FrontPage(){
+export default function FrontPage(props){
     const classes = useStyles();
 
     return (
         <FadeIn>
             <div className={classes.frontContainer}>
             <div className={classes.textWrapper}>
-                <p className={classes.title1}>HELLO THERE, <Shaker><Emoji label="shaka"/></Shaker></p>
+                <div className={classes.title1}>HELLO THERE, <Shaker><Emoji label="shaka"/></Shaker></div>
                 <p className={classes.title1} style={{margin:'30px 0'}}>I'M AN ENTHUSIASTIC</p>
-                <p className={classes.title1}>SOFTWARE ENGINEER <Emoji label="laptopboy"/></p>
+                <p className={classes.title1}> SOFTWARE ENGINEER <Emoji label="laptopboy"/></p>
             </div>
 
         </div>
-        <Projects/>
+        <Projects projectlist = {props.projectlist}/>
         </FadeIn>
         
     );

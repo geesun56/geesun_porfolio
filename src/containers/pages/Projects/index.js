@@ -46,32 +46,39 @@ const useStyles = makeStyles({
 
 
 
-let cols = window.innerWidth > 1200? 3 : (window.innerWidth > 763? 2 : 1 );
-    const projects = new Array(cols).fill(null).map(()=>new Array(1));
+    let cols = window.innerWidth > 1200? 3 : (window.innerWidth > 763? 2 : 1 );
+    
 
 
 export default function Projects(props){
 
     const classes = useStyles();
-
+    const [projectArray, setProjectArray] = useState([]);
     
 
     const initProjects = (proj) => {
+        proj.sort((a,b) => a.Order - b.Order)
+        const projects = new Array(cols).fill(null).map(()=>new Array(1));
         proj.forEach((pr, index) => {
+            
+            console.log(pr)
             projects[index%cols].push(<FadeUp><ProjectPreview project = {pr}/></FadeUp>   )
         })
+
+        setProjectArray(projects)
     }
 
     useEffect(() => {
         initProjects(props.projectlist);
+        
 
-    },[])
+    },[props])
     
     return (
         <div className={classes.projectContainer}> 
         <Glowing><p className={classes.projectHeader}>Featured works <Emoji label="star"/></p></Glowing>
 
-        <FlexBox projects = {projects} />
+        <FlexBox projects = {projectArray} />
     </div>
     );
 }

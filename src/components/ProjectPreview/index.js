@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {makeStyles} from '@material-ui/styles';
 
 const useStyles = makeStyles({
@@ -42,11 +42,11 @@ export default function ProjectPreview(props) {
 
     return(<div className={classes.projectCard}>
         <div className={classes.thumbnail}>
-            <img style={{width: '100%', height: '100%'}} src={project.srcPreview} alt={project.title}/>
+            <img style={{width: '100%', height: '100%'}} src={project.Thumbnail} alt={project.Title}/>
         </div>
         
-            <p className={classes.title}>{project.title}</p>
-            <p className={classes.desc}> {project.description}</p>
+            <p className={classes.title}>{project.Title}</p>
+            <p className={classes.desc}> {project.Description}</p>
         
     </div>)
 }

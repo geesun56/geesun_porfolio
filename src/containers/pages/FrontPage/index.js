@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {makeStyles} from '@material-ui/styles';
 import Button from '../../../components/Button/';
 import {AiFillDownCircle} from 'react-icons/ai';
@@ -64,9 +64,24 @@ const useStyles = makeStyles({
     
 })
 
+const axios = require('axios').default;
+const url = 'https://geesun-portfolio-7c275-default-rtdb.firebaseio.com/Projects.json';
 
 export default function FrontPage(props){
     const classes = useStyles();
+    const [projects, setProjects] = useState(null);
+
+    const getData = async () => {
+        axios.get(url)
+        .then((res) => {
+          setProjects(Object.values(res.data))
+        })
+        .catch((err) => console.error(err));
+      }
+    
+      useEffect(() => {
+        getData();
+      }, [])
 
     return (
         <FadeIn>
@@ -78,7 +93,7 @@ export default function FrontPage(props){
             </div>
 
         </div>
-        <Projects projectlist = {props.projectlist}/>
+        <Projects projectlist = {projects? projects: []}/>
         </FadeIn>
         
     );

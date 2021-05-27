@@ -13,7 +13,7 @@ const useStyles = makeStyles({
         padding:'0',
         transition: 'transform .2s',
         display: 'block',
-        overflow: 'auto',
+        overflow: 'hidden',
         lineHeight: 0,
         '&:hover': {
             transform: 'scale(1.1) rotate(-3deg)',

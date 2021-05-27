@@ -20,7 +20,7 @@ const useStyles = makeStyles({
           }
     },
     'projectHeader':{
-        fontFamily: "'Raleway', serif",
+        fontFamily: "'Raleway','Pattaya', serif",
         fontSize: '45px',
         fontWeight: 'bold',
         ['@media (max-width:1200px)']: { // eslint-disable-line no-useless-computed-key
@@ -61,7 +61,7 @@ export default function Projects(props){
         const projects = new Array(cols).fill(null).map(()=>new Array(1));
         proj.forEach((pr, index) => {
             
-            console.log(pr)
+            // console.log(pr)
             projects[index%cols].push(<FadeUp><ProjectPreview project = {pr}/></FadeUp>   )
         })
 

@@ -8,20 +8,8 @@ import FadeIn from '../../../components/Animation/FadeIn';
 import Projects from '../Projects';
 
 const useStyles = makeStyles({
-    'portrait': {
-        width: '352px',
-        height: '352px',
-        objectFit: 'cover',
-        objectPosition: '100% 0',
-        borderRadius: '50%',
-        float: 'left'
-    },
-    'textBlock': {
-        fontSize: '22px',
-        padding: '15px 0',
-        paddingRight: '50px',
-        lineHeight:'1.6'
-    } ,
+    
+   
     'textWrapper':{
         width: '100%',
         textAlign: 'left',
@@ -41,11 +29,7 @@ const useStyles = makeStyles({
             marginTop:'50px',
           }
     },
-    'scroll':{
-        margin: '310px 0 0 0',
-        display: 'inline-block',
-        width: '100%'
-    },
+    
     'title1':{
         fontSize: '60px', 
         margin: '0',

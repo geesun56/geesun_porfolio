@@ -47,7 +47,7 @@ const useStyles = makeStyles({
         
     },
     'Banner':{
-        marginTop: '11px', width: '230px',height: 'auto', display: "inline-block", float: 'left', marginLeft: '20px',
+        marginTop: '11px', width: '230px', height: '47px', display: "inline-block", float: 'left', marginLeft: '20px',
         ['@media (max-width:1200px)']: { // eslint-disable-line no-useless-computed-key
             width: '230px',
             margin: '0',
@@ -71,7 +71,7 @@ export default function Navigation(props){
 
     return (<div style={{paddingTop: "20px", overflow:'hidden'}}>
         
-        <a className={classes.Homelink}href=""><img className={classes.Banner} src="https://fontmeme.com/permalink/210510/4540dabd95c65ea91fb9375e82f61074.png" alt="graffiti-geesun" border="0"/></a>
+        <a className={classes.Homelink} href="/"><img className={classes.Banner} src="https://firebasestorage.googleapis.com/v0/b/geesun-portfolio-7c275.appspot.com/o/banner.png?alt=media&token=6c9bb67d-3911-44e4-9a72-c39b0734506f" alt="graffiti-geesun" border="0"/></a>
         <ul className={classes.MenuTabs}>
             {NavItems.map((m)=><li className={clsx({[classes.active] : menu == m })} onClick={() => setMenu(m)} ><Jello when={menu==m}>{m}</Jello></li>)}
             

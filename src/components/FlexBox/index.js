@@ -28,7 +28,7 @@ export default function FlexBox(props){
     const [thumbnail, setThumbnail] = useState([]);
 
     useEffect(() => {
-        console.log(projects);
+        // console.log(projects);
     }, [])
 
     return (

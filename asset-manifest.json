@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/geesun_porfolio/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/geesun_porfolio/static/js/main.fdb370b4.chunk.js",
-    "main.js.map": "/geesun_porfolio/static/js/main.fdb370b4.chunk.js.map",
+    "main.js": "/geesun_porfolio/static/js/main.c4fe85c3.chunk.js",
+    "main.js.map": "/geesun_porfolio/static/js/main.c4fe85c3.chunk.js.map",
     "runtime-main.js": "/geesun_porfolio/static/js/runtime-main.98a9ab17.js",
     "runtime-main.js.map": "/geesun_porfolio/static/js/runtime-main.98a9ab17.js.map",
     "static/js/2.45a86af3.chunk.js": "/geesun_porfolio/static/js/2.45a86af3.chunk.js",
@@ -22,6 +22,6 @@
     "static/js/runtime-main.98a9ab17.js",
     "static/js/2.45a86af3.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.fdb370b4.chunk.js"
+    "static/js/main.c4fe85c3.chunk.js"
   ]
 }

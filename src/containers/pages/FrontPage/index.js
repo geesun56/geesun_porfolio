@@ -40,8 +40,16 @@ const useStyles = makeStyles({
           ['@media (max-width:763px)']: { // eslint-disable-line no-useless-computed-key
             fontSize: '2.1em',
           },
-        ['@media (max-width:400px)']: { // eslint-disable-line no-useless-computed-key
-            fontSize: '1.4em',
+        ['@media (max-width:540px)']: { // eslint-disable-line no-useless-computed-key
+            fontSize: '1.8em',
+            
+          },
+          ['@media (max-width:470px)']: { // eslint-disable-line no-useless-computed-key
+            fontSize: '1.5em',
+            
+          },
+          ['@media (max-width:400px)']: { // eslint-disable-line no-useless-computed-key
+            fontSize: '1.2em',
             
           }
     },
